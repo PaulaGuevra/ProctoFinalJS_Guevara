@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juego de cartas</title>
+        <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body>
+        <h1>Juego de cartas</h1>
+        <div class=".container-fluid mx-auto tablero">
+            <div id="mazo-cards">
+                <img id="oculto" src="./cards/BACK.png">
+            </div>
+
+            <div class="jugador1">Jugador 1</div>
+            
+            <div id="jugador1-cards">
+            </div>
+        
+            <div class="jugador2"> Jugador 2</div>
+            <div id="jugador2-cards">
+            </div>
+        
+            <div class="jugador3"> Jugador 3</div>
+            <div id="jugador3-cards">
+            </div>
+        
+            <div class="jugador4"> Jugador 4</div>
+            <div id="jugador4-cards">
+            </div>
+            
+            <button id="jugar">¡Jugar!</button>
+
+                     
+            <div id="contador">Puntaje
+                <div id="puntosJ1">Jugador 1:
+                    <span>0</span>
+                </div>
+                <div id="puntosJ2">Jugador 2:
+                    <span>0</span>
+                </div>
+                <div id="puntosJ3">Jugador 3:
+                    <span>0</span>
+                </div>
+                <div id="puntosJ4">Jugador 4:
+                    <span>0</span>
+                </div>
+            </div>
+
+            <div class="mensaje"><p>¡Empiece el juego!</p></div>
+            
+            <form class="cambiar-ciudad">
+                <label for="city">Ingresa una ciudad para conocer el clima</label>
+                <input type="text" name="city" class="form-control">
+            </form>
+
+            <div class=".container d-none clima">
+                <div class="icon"><img class="clima-icon" src="" alt=""></div>
+                <div class="details">
+                    <h6>Ciudad</h6>
+                    <div>Weather condition</div>
+                    <span>temp</span>
+                    <span>&deg;C</span>
+                </div>
+            </div>
+            
+           
+        </div>
+        <script src="./app.js"></script>
+    </body>
+</html>
