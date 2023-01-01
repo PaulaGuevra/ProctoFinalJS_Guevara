@@ -194,7 +194,7 @@ function obtenerValor(card){
 const apikey = "G9RB7qnAIEJ0o12KygrPCX2xiGkCsVdv";
 
 const getWeather = async (id) => {
-    const base = "http://dataservice.accuweather.com/currentconditions/v1/";
+    const base = "https://dataservice.accuweather.com/currentconditions/v1/";
     const query = `${id}?apikey=${apikey}`;
 
     const response = await fetch(base + query);
@@ -206,20 +206,13 @@ const getWeather = async (id) => {
 //obtener informacion de la ciudad 
 
 const getCity = async (city) => {
-    const base = "http://dataservice.accuweather.com/locations/v1/cities/search";
+    const base = "https://dataservice.accuweather.com/locations/v1/cities/search";
     const query = `?apikey=${apikey}&q=${city}`;
 
     const response = await fetch(base + query);
     const data = await response.json();
     return (data[0]);
 };
-
-// getCity("mendoza").then(data => {
-//         return getWeather(data.Key);
-//     }).then(data => {
-//         console.log(data);
-//     } )
-//     .catch(err => console.log(err));
 
 
 
